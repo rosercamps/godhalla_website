@@ -165,43 +165,44 @@ header{
 }
 
 /* Hide Hamburger */
-#hamnav label, #hamburger { display: none; }
+nav label, #hamburger { display: none; }
 
 /* Horizontal Menu Items */
-#hamnav{
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 5 0 50%;
 }
 
-#hamnav ul{
+nav ul{
     display: flex;
     justify-content: space-between;
     flex: 1 0 auto;
 }
 
-#hamnav li .submenu{
+
+nav li .submenu{
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
     position: absolute;
-    left: 60%;
-    width: 10%;
+    min-width: inherit;
     padding: 10px 100px 20px;
 }
 
-#hamnav li:hover .submenu{
+nav li:hover > ul{
     visibility: visible;
     opacity: 1;
 }
  
-#hamnav li a{
+nav li a{
+    display: block;
     background: 
       linear-gradient(currentColor 0 0) 
       bottom /var(--d, 0) 1px 
@@ -209,7 +210,7 @@ header{
     transition:0.5s;
 }
 
-#hamnav li a:hover {
+nav li a:hover {
     --d: 100%;
 }
 
@@ -415,7 +416,7 @@ footer{
         flex: 0 1 25%;
     }
 
-    #hamnav{
+    nav{
         flex: 5 0 100%;
         order: 1;
         padding: 10px 20px 0px 20px;
@@ -440,13 +441,13 @@ footer{
         flex: 0 1 33%;
     }
 
-    #hamnav{
+    nav{
         flex: 0 1 33%;
         order: -1;
     }
 
     /* Show Hamburger Icon */
-    #hamnav label { 
+    nav label { 
     display: flex; 
     color: #383638;
     background: white;
@@ -466,6 +467,6 @@ footer{
 
   /* Toggle Show/Hide Menu */
   #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: flex; }
+  nav input:checked ~ #hamitems { display: flex; }
 }
  
