@@ -124,6 +124,7 @@ main section:nth-child(odd) .button{
 h1{
     font-size: 60px;
     font-weight: bold;
+    text-align: center;
 }
 h2{
     font-size: 48px;
@@ -133,6 +134,7 @@ h2{
 h3{
     font-size: 22px;
     text-transform: uppercase;
+    text-align: center;
 }
 h3 span{
     font-weight: 400;
@@ -152,11 +154,13 @@ h6{
 
 /* HEADER */
 header{
-    padding: 10px 20px;
     background-color: white;
+    z-index: 100;
+    padding: 0px 20px;
 }
 
 .logo-header{
+    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -165,7 +169,7 @@ header{
 }
 
 /* Hide Hamburger */
-nav label, #hamburger { display: none; }
+nav .icon-menu, #btn-menu { display: none; }
 
 /* Horizontal Menu Items */
 nav{
@@ -175,7 +179,7 @@ nav{
     flex: 5 0 50%;
 }
 
-nav ul{
+#items-menu{
     display: flex;
     justify-content: space-between;
     flex: 1 0 auto;
@@ -195,7 +199,7 @@ nav li .submenu{
     padding: 10px 0px;
 }
 
-nav li:hover > ul{
+nav li:hover > .submenu{
     visibility: visible;
     opacity: 1;
 }
@@ -408,6 +412,7 @@ footer{
 
     .logo-header{
         flex: 0 1 75%;
+        height: 85px;
     }
 
     #chart{
@@ -415,9 +420,9 @@ footer{
     }
 
     nav{
+        height: 65px;
         flex: 5 0 100%;
         order: 1;
-        padding: 10px 20px 0px 20px;
         align-self: flex-end;
     }
 
@@ -429,6 +434,7 @@ footer{
     .logo-header{
         flex: 0 1 33%;
         justify-content: center;
+        height: 85px;
     }
 
     .company-name{
@@ -445,26 +451,35 @@ footer{
     }
 
     /* Show Hamburger Icon */
-    nav label { 
-    display: flex; 
-    color: #383638;
-    background: white;
-    font-style: normal;
-    font-size: 1.2em;
-    padding: 10px;
-  }
+    nav .icon-menu { 
+        display: flex;
+        width: 60px;
+        padding: 10px;
+        color: #383638;
+        font-size: 30px;
+    }
 
   /* Break down menu items into vertical */
-  #hamitems {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: white;
-    padding: 10px 25px;
-  }
+
+    #items-menu {
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 85px);
+        background-color: #383638;
+        top: -100vh;
+        text-align: center;
+        transition: all 500ms;
+        flex-direction: column;
+    }
+
+    #items-menu li{
+        margin: 30px 0 0 0;
+        height: 30px;
+    }
+
 
   /* Toggle Show/Hide Menu */
-  #hamitems { display: none; }
-  nav input:checked ~ #hamitems { display: flex; }
+  #items-menu { display: none; }
+  nav input:checked ~ #items-menu { display: flex;}
 }
  
