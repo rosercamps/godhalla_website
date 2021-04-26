@@ -169,7 +169,11 @@ header{
 }
 
 /* Hide Hamburger */
-nav .icon-menu, #btn-menu { display: none; }
+#btn-menu, .icon-menu { display: none; }
+
+.icon-menu:hover{
+    cursor: pointer;
+}
 
 /* Horizontal Menu Items */
 nav{
@@ -183,17 +187,19 @@ nav{
     display: flex;
     justify-content: space-between;
     flex: 1 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
-nav li .submenu{
-    background-color: white;
+#items-menu .submenu{
+    display: none;background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s ease-in;
     position: absolute;
     min-width: 140px;
     padding: 10px 0px;
@@ -203,8 +209,9 @@ nav li:hover > .submenu{
     visibility: visible;
     opacity: 1;
 }
- 
+
 nav li a{
+    display: block;
     background: 
       linear-gradient(currentColor 0 0) 
       bottom /var(--d, 0) 1px 
@@ -447,39 +454,40 @@ footer{
 
     nav{
         flex: 0 1 33%;
-        order: -1;
-    }
-
-    /* Show Hamburger Icon */
-    nav .icon-menu { 
-        display: flex;
-        width: 60px;
-        padding: 10px;
-        color: #383638;
-        font-size: 30px;
-    }
-
-  /* Break down menu items into vertical */
-
-    #items-menu {
-        position: fixed;
+        position: absolute;
+        background: #383638;
+        color: white;
         width: 100vw;
-        height: calc(100% - 85px);
-        background-color: #383638;
-        top: -100vh;
-        text-align: center;
-        transition: all 500ms;
+        height: calc(100vh - 85px);
+        margin-top: -100vh;
+        transition: all 500ms ease;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    #items-menu{
         flex-direction: column;
+        align-items: center;
     }
 
     #items-menu li{
-        margin: 30px 0 0 0;
-        height: 30px;
+        padding: 10px 0px;
     }
 
+    /* Show Hamburger Icon */
+    .icon-menu { 
+        display: flex;
+        flex: 0 1 33%;
+        color: #383638; 
+        font-size: 30px;
+        transition: all 500ms ease;  
+        order: -1;
+        align-self: center;
+    }
 
-  /* Toggle Show/Hide Menu */
-  #items-menu { display: none; }
-  nav input:checked ~ #items-menu { display: flex;}
+    #btn-menu:checked ~ nav{
+        margin: 85px;
+    }
+    
+
 }
- 
