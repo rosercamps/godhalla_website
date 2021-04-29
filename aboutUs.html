@@ -21,16 +21,15 @@
         <div class="wrapper row-1">
             <a href="home.html" class="logo-header header-left">
                 <!-- logo -->
-                <div>
-                    <img src="img/logo_b_xs.png" alt="logo" class="logo_xs">
-                </div>
-                <div>
-                    <h6>Godhalla craft</h6>
-                </div>
+                <img src="img/logo_b_xs.png" alt="logo" class="logo_xs">
+                <h6 class="company-name">Godhalla craft</h6>
             </a>
                 <!-- menu -->
-            <nav id="nav" class="header-right">
-                <ul>
+            
+            <input type="checkbox" id="btn-menu"/>
+            <label for="btn-menu" class="icon-menu"><i class="fas fa-bars"></i></label>
+            <nav class="header-right">
+                <ul id="items-menu">
                     <li>
                         <a href="home.html">Home</a>
                     </li>
@@ -41,8 +40,8 @@
                         <a href="whatsNew.html">What's new</a>
                     </li>
                     <li>
-                        <a href="">Our products <i class="fas fa-caret-down"></i></a>
-                        <ul>
+                        <a href="#">Our products <i class="fas fa-caret-down"></i></a>
+                        <ul class="submenu">
                             <li><a href="products.html">Necklaces</a></li>
                             <li><a href="products.html">Rings</a></li>
                             <li><a href="products.html">Earrings</a></li>
