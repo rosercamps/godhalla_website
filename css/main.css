@@ -6,9 +6,9 @@ html{
 }
 
 body{
-    font-family: 'Raleway', sans-serif;	
+    font-family: 'Raleway', sans-serif;
     font-weight: 100;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 2em;
 }
 
@@ -25,6 +25,7 @@ section .wrapper {
 img{
     max-width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .row-1{
@@ -45,7 +46,7 @@ img{
 
 .col-2{
     max-width: 66%;
-    margin: 10px;
+    margin: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -61,24 +62,24 @@ img{
 }
 
 .col-1 h2{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     align-self: center;
 }
 
 .col-1 img{
     padding: 50px;
     width: 100%;
+    min-height: 500px;
     max-width:900px;
     align-self: center;
+    /*object-fit: cover;*/
 }
 
 .left{
-    display: flex;
     align-items: flex-end;
     text-align: right;
 }
 .right{
-    display: flex;
     align-items: flex-start;
     text-align: left;
 }
@@ -92,21 +93,23 @@ main section:nth-child(odd){
     background-color: #383638;
 }
 
-main section:nth-child(even) .button{
+main .button{
     text-align: center;
+    font-weight: bold;
+    font-size: 1.15em;
+    border-radius: 3px;
+    width: 130px;
+    padding: 10px 0px;
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+main section:nth-child(even) .button{
     color: #B8B8B8;
     background-color: #383638;
-    border-radius: 3px;
-    width: 100px;
-    padding: 10px 0px;
 }
 main section:nth-child(odd) .button{
-    text-align: center;
     color: #383638;
     background-color: #B8B8B8;
-    border-radius: 3px;
-    width: 100px;
-    padding: 10px 0px;
 }
 
 
@@ -121,13 +124,19 @@ main section:nth-child(odd) .button{
 }
 
 /* TITLES */
+h1, h2, h4, h5{
+    font-family: 'Macondo Swash Caps', cursive;
+    text-transform: capitalize;
+}
+
 h1{
     font-size: 60px;
     font-weight: bold;
     text-align: center;
+    line-height: 1.2em;
 }
 h2{
-    font-size: 48px;
+    font-size: 38px;
     font-weight: bold;
     padding-top: 10px;
 }
@@ -135,6 +144,7 @@ h3{
     font-size: 22px;
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
 }
 h3 span{
     font-weight: 400;
@@ -151,6 +161,14 @@ h6{
     padding-left: 20px;
     text-transform: uppercase;
 }
+p{
+    padding: 25px 0px;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+/*-----------------------------*/
 
 /* HEADER */
 header{
@@ -244,6 +262,7 @@ nav li a:hover {
 }
 
 /* MAIN HEADER */
+
 #main-header .wrapper{
     color: white;
     display: flex;
@@ -252,6 +271,7 @@ nav li a:hover {
     align-items: center;
     height: 650px;
     padding: 30px 0px;
+    background-color: rgba(31, 31, 31, 0.5);
 }
 /* HOME header image */
 .header-img{
@@ -302,7 +322,7 @@ nav li a:hover {
 #products img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    /*object-fit: cover;*/
     filter: brightness(100%);
 }
 #products .collection:hover img{
@@ -332,6 +352,9 @@ nav li a:hover {
     text-align: center;
     height: 550px;
 }
+#newsletter div div{
+    margin-bottom: 20px;
+}
 
 #newsletter input{
     margin-right: 10px;
@@ -343,12 +366,14 @@ nav li a:hover {
 
 #newsletter .input-email{
     width: 300px;
+    min-height: 50px;
     padding-left: 10px;
 }
 
 /* HOME contact us */
 
 #map{
+    display: inline-block;
     max-width: 600px;
     max-height: 600px;
     width: 60vw;
@@ -369,7 +394,7 @@ nav li a:hover {
 }
 
 #contact-details h2{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #contact-details li{
@@ -396,13 +421,14 @@ nav li a:hover {
 }
 
 #contact .fab, #contact .fas{
-    padding: 0px 5px;
+    padding: 0px 10px;
 }
 
 /* FOOTER */
 footer{
     background-color: white;
     padding-bottom: 70px;
+    padding: 0px 20px;
 }
 #footer-credits{
     padding-top: 10px;
@@ -413,8 +439,22 @@ footer{
 
 /* TABLET LAYOUT */
 @media only screen and (min-width: 501px) and (max-width: 799px){
+    .no-mobile{
+        display: none!important;
+    }
+    h1{
+        font-size: 48px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .left, .right{
+        align-items: center;
+        text-align: justify;
+    }
+
     header .wrapper{
-        flex-wrap: wrap!important;
+        flex-wrap: wrap;
     }
 
     .logo-header{
@@ -433,11 +473,59 @@ footer{
         align-self: flex-end;
     }
 
+
+    /* HOME contact us */
+    #contact-details{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .mobile-col-2{
+        width: 40%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    #contact-details i{
+        font-size: 30px;
+        order: -1;
+    }
+
+    #contact-details li {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+   
+
+    
 }
 
 /* MOBILE LAYOUT */
 @media only screen and (max-width: 500px){
-    
+    .no-mobile{
+        display: none!important;
+    }
+    h1{
+        font-size: 48px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .left, .right{
+        align-items: center;
+        text-align: justify;
+    }
+
+    .button{
+        margin: 10px;
+    } 
+
     .logo-header{
         flex: 0 1 33%;
         justify-content: center;
@@ -489,5 +577,41 @@ footer{
         margin: 85px;
     }
     
+
+    /* HOME contact us */
+    #contact-details{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-col-2{
+        width: 40%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    #contact-details h2{
+        text-align: center;
+    }
+
+    #work, #social-media{
+        padding-top: 20px;
+    }
+
+    #contact-details i{
+        font-size: 30px;
+        order: -1;
+    }
+
+    #contact-details li {
+        align-items: flex-start;
+        text-align: left;
+    }
+
 
 }
