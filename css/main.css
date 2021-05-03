@@ -168,7 +168,6 @@ p{
 .wrap{
     flex-wrap: wrap;
 }
-
 /*-----------------------------*/
 
 /* HEADER */
@@ -188,7 +187,7 @@ header{
 }
 
 /* Hide Hamburger */
-#btn-menu, .icon-menu, #btn-submenu { display: none; }
+#btn-menu, .icon-menu { display: none; }
 
 .icon-menu:hover{
     cursor: pointer;
@@ -213,7 +212,7 @@ nav{
 }
 
 
-#items-menu .submenu{
+/*#items-menu .submenu{
     background-color: #383638;
     color: white;
     display: flex;
@@ -226,12 +225,25 @@ nav{
     min-width: 100%;
     height: 80px;
     padding: 10px 0px;
+}*/
+
+#items-menu .submenu{
+    background-color: #383638;
+    color: white;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    transition: visibility 0s, opacity 0.5s ease-in;
+    position: absolute;
+    top: 100px;
+    left: 0%;
+    min-width: 100%;
+    height: 80px;
+    padding: 10px 0px;
 }
 
-nav li:hover > .submenu{
-    display: block;
-    visibility: visible;
-    opacity: 1;
+#items-menu li:hover .submenu{
+    display: flex;
 }
 
 nav li a{
@@ -589,12 +601,13 @@ footer{
         align-items: center;
         transition: visibility 0s, opacity 0.5s ease-in;
         position: inherit;
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
     #items-menu li:hover .submenu{
         display: flex;
     }
+
 
     /* HOME contact us */
     #contact-details{
