@@ -187,7 +187,7 @@ header{
 }
 
 /* Hide Hamburger */
-#btn-menu, .icon-menu { display: none; }
+#btn-menu, .icon-menu, #btn-submenu { display: none; }
 
 .icon-menu:hover{
     cursor: pointer;
@@ -204,26 +204,31 @@ nav{
 #items-menu{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex: 1 0 auto;
     margin: 0;
     padding: 0;
+    height: 100px;
 }
 
+
 #items-menu .submenu{
-    display: none;background-color: white;
+    background-color: #383638;
+    color: white;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
     transition: visibility 0s, opacity 0.5s ease-in;
     position: absolute;
-    min-width: 140px;
+    top: 100px;
+    left: 0%;
+    min-width: 100%;
+    height: 80px;
     padding: 10px 0px;
 }
 
 nav li:hover > .submenu{
+    display: block;
     visibility: visible;
     opacity: 1;
 }
@@ -575,7 +580,20 @@ footer{
     #btn-menu:checked ~ nav{
         margin: 85px;
     }
-    
+
+    #items-menu .submenu{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: visibility 0s, opacity 0.5s ease-in;
+        position: inherit;
+        margin: 20px 0;
+    }
+
+    #items-menu li:hover .submenu{
+        display: flex;
+    }
 
     /* HOME contact us */
     #contact-details{
