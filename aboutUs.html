@@ -21,14 +21,13 @@
 </head>
 <body>
     <header>
-        <div class="wrapper row-1">
+        <div class="row-1">
             <a href="home.html" class="logo-header header-left">
                 <!-- logo -->
                 <img src="img/logo_b_xs.png" alt="logo" class="logo_xs">
                 <h6 class="company-name">Godhalla craft</h6>
             </a>
                 <!-- menu -->
-            
             <input type="checkbox" id="btn-menu"/>
             <label for="btn-menu" class="icon-menu"><i class="fas fa-bars"></i></label>
             <nav class="header-right">
@@ -43,12 +42,15 @@
                         <a href="whatsNew.html">What's new</a>
                     </li>
                     <li>
-                        <a href="#">Our products <i class="fas fa-caret-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="products.html">Necklaces</a></li>
-                            <li><a href="products.html">Rings</a></li>
-                            <li><a href="products.html">Earrings</a></li>
-                        </ul>
+                        <div class="submenu">
+                            <input type="checkbox" id="btn-submenu">
+                            <label for="btn-submenu"><a>Our products <i class="fas fa-caret-down"></i></a></label>
+                            <ul class="items-submenu">
+                                <li><a href="products.html">Necklaces</a></li>
+                                <li><a href="products.html">Rings</a></li>
+                                <li><a href="products.html">Earrings</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="blog.html">Blog</a>
@@ -69,7 +71,7 @@
         <section>
             <div class="wrapper col-1">
                 <!-- About us -->
-                    <h2>About us</h2>    
+                    <h2 class="centered-header">About us</h2>    
                     <p>Los inicios de Godhalla Craft se remontan a febrero-marzo del 2020, durante el que es a dí de hoy el mejor viaje de mi vida a Edimburgo, junto a mi hermano Rafa. Fuimos a pasar una semana de vacaciones tras ambos pasar muchas horas estudiando y trabajando, en principio teníamos pensado ir a Amsterdam pero cambiamos de destino a Edimburgo, y efectivamente acertamos. Una ciudad preciosa, con una magia que la hace única, un clima místico y una natura inigualable. Pasamos una semana de aquí para allá visitando tanto como pudimos ya que queríamos ir a los Highlands pero había un tifón que nos hizo imposible el trayecto… </p>
                     <p>Así fue como un miércoles por la mañana en nuestro paseo matinal al super, decidimos volver al hostal a coger las cosas por otro camino y encontramos un mercadillo de artesanía. Yo hasta entonces había hecho una feria pero como artista 3d vendiendo impresiones como la que véis en al fotografía de abajo, el carnero de aries ferrus, mi grupo de recreación medieval. </p>
                     <img src="img/ph-100.jpeg" alt="100">
