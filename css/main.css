@@ -330,20 +330,19 @@ nav li a:hover {
     align-items: flex-end;
 }
 
-#our-products img{
+#our-products .collection img{
     height: 100%;
     width: 100%;
-    filter: brightness(100%);
+    transition: all 0.3s;
 }
 #our-products .collection:hover img{
-    filter: brightness(60%);
+    transform: scale(1.1);
 }
 
 /*      Collection/product name     */
 #our-products .collection div{
     position: absolute;
-    margin-bottom: 30px;
-    margin-left: 40px;
+    margin: 5%;
     width: 150px;
     height: 50px;
     color: #B8B8B8;
@@ -745,6 +744,14 @@ footer{
         display: flex;
     }
 
+    /*-------------------------------------*/
+    /*             OUR PRODUCTS            */
+    /*-------------------------------------*/
+
+
+
+
+    
     /*-------------------------------------*/
     /*             NEWSLETTER              */
     /*-------------------------------------*/
