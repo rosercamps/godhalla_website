@@ -511,6 +511,11 @@ footer{
     display: none;
 }
 
+#exit-cookies:checked ~ #cookie-banner {
+    display: none;
+  }
+
+
 
 /***************************************/
 /***           TABLET LAYOUT         ***/
@@ -563,13 +568,14 @@ footer{
         flex: 0 1 25%;
         position: absolute;
         background: #383638;
+        background: linear-gradient(180deg, rgba(75,73,75,1) 0%, rgba(56,54,56,1) 50%);
         color: white;
         width: 100vw;
         height: calc(100vh - 85px);
         margin-top: -100vh;
         transition: all 500ms ease;
         align-items: flex-start;
-        padding: 20px;
+        padding: 20px 0;
     }
 
     /*      Vertical Menu items      */
@@ -601,7 +607,9 @@ footer{
         align-items: center;
         transition: visibility 0s, opacity 0.5s ease-in;
         position: inherit;
-        margin: 30px 0;
+        margin: 50px 0;
+        background-color: transparent;
+        background: transparent;   
     }
     #btn-submenu:checked ~ .items-submenu{
         display: flex;
@@ -631,7 +639,9 @@ footer{
     
 }
 
-/* MOBILE LAYOUT */
+/***************************************/
+/***           MOBILE LAYOUT         ***/
+/***************************************/
 @media only screen and (max-width: 500px){
     /* ------------------------------- */
     /*       GENERAL SETTINGS          */
@@ -686,13 +696,14 @@ footer{
         flex: 0 1 25%;
         position: absolute;
         background: #383638;
+        background: linear-gradient(180deg, rgba(75,73,75,1) 0%, rgba(56,54,56,1) 50%);
         color: white;
         width: 100vw;
         height: calc(100vh - 85px);
         margin-top: -100vh;
         transition: all 500ms ease;
         align-items: flex-start;
-        padding: 20px;
+        padding: 20px 0;
     }
     
     /*      Vertical Menu items      */
@@ -726,7 +737,9 @@ footer{
         align-items: center;
         transition: visibility 0s, opacity 0.5s ease-in;
         position: inherit;
-        margin: 30px 0;
+        margin: 50px 0;
+        background-color: transparent;
+        background: transparent;
     }
     #btn-submenu:checked ~ .items-submenu{
         display: flex;
