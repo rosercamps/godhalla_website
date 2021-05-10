@@ -162,6 +162,13 @@ h4{
     text-align: center;
 }
 
+h5{
+    font-size: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
 h6{
     font-size: 18px;
     padding-left: 20px;
@@ -300,6 +307,9 @@ nav li a:hover {
 .whatsNew-img{
     background-image: url("../img/new-header-img.jpg");
 }
+.necklaces-img{
+    background-image: url("../img/necklaces-header-img.jpg");
+}
 
 /*-------------------------------------*/
 /*           PRODUCTS LIST             */
@@ -312,6 +322,46 @@ nav li a:hover {
 .product-image{
     width: 300px;
     height: 300px;
+}
+
+.product-description{
+    display: none;
+}
+
+.product-image:hover img{
+    opacity: 0.3;
+}
+.product-image:hover .product-description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    padding: 20px;
+}
+
+/*      Pagination      */
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pages input{
+    display: none;
+}
+
+.pages label{
+    padding: 10px 20px;
+}
+
+.pages input:checked + label{
+    font-weight: bold;
+    border: 1px solid #383638;
 }
 
 /*-------------------------------------*/
@@ -355,7 +405,7 @@ nav li a:hover {
 }
 
 /*-------------------------------------*/
-/*             NEWSLETTER              */
+/*    NEWSLETTER/PERSONALIZED FORMS    */
 /*-------------------------------------*/
 .form-section .wrapper{
     display: flex;
@@ -363,8 +413,12 @@ nav li a:hover {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    height: 550px;
+    width: 70%;
 }
+.form-section .button{
+    margin: 10px;
+} 
+
 #newsletter div div{
     margin-bottom: 20px;
 }
@@ -380,7 +434,25 @@ nav li a:hover {
 #newsletter .input-email{
     width: 300px;
     min-height: 50px;
-    padding-left: 10px;
+    margin: 10px;
+}
+
+#personalized .name-email input{
+    height: 50px;
+    width: 48%;
+    margin: 10px 0;
+}
+
+#personalized input[type="textarea"]{
+    height: 200px;
+    width: 100%;
+    margin: 10px;
+}
+
+#personalized .name-email{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*-------------------------------------*/
@@ -479,7 +551,8 @@ footer{
     padding: 0px 20px;
 }
 #footer-credits{
-    padding-top: 10px;
+    font-size: 12px;
+    padding: 10px 0 30px;
 }
 
 /*-------------------------------------*/
@@ -667,6 +740,18 @@ footer{
     /*      Collection/product name     */
     #our-products .collection div{
         margin: 10%;
+    }
+    
+    /*-------------------------------------*/
+    /*           PERSONALIZED FORM         */
+    /*-------------------------------------*/
+
+    #personalized .name-email{
+        flex-direction: column;
+    }
+    #personalized .name-email input{
+        width: 100%;
+        margin: 10px 0;
     }
 
     /*-------------------------------------*/
@@ -859,10 +944,19 @@ footer{
     /*-------------------------------------*/
     /*             NEWSLETTER              */
     /*-------------------------------------*/
-    #newsletter .button{
-        margin: 10px;
-    } 
+    
 
+    /*-------------------------------------*/
+    /*           PERSONALIZED FORM         */
+    /*-------------------------------------*/
+
+    #personalized .name-email{
+        flex-direction: column;
+    }
+    #personalized .name-email input{
+        width: 100%;
+        margin: 10px 0;
+    }
     /*-------------------------------------*/
     /*              FIND US                */
     /*-------------------------------------*/
