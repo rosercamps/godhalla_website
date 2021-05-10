@@ -446,7 +446,7 @@ nav li a:hover {
 #personalized input[type="textarea"]{
     height: 200px;
     width: 100%;
-    margin: 10px;
+    margin: 10px; 
 }
 
 #personalized .name-email{
