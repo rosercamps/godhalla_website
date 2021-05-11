@@ -117,6 +117,10 @@ main section:nth-child(odd):not(:first-child){
     height: 100%;
 }
 
+.article:nth-child(even) .col-2:last-child{
+    order: -1;
+}
+
 /*      Buttons     */
 main .button{
     text-align: center;
@@ -473,6 +477,8 @@ nav li a:hover {
     width: 300px;
     min-height: 50px;
     margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
 }
 
 #personalized .name-email input{
@@ -481,12 +487,13 @@ nav li a:hover {
     margin: 10px 0;
 }
 
-#personalized .input-message{
+#personalized .input-message, #personalized .input-name, #personalized .input-email{
     margin: 10px 0;
     height: 200px;
     width: 100%;
     padding: 10px 3px;
     font-family: 'Raleway', sans-serif;
+    font-size: 14px;
 }
 
 #personalized .name-email{
