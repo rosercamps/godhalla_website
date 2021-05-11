@@ -1,0 +1,128 @@
+<!-- Examen final curso Diseño Adaptativo -->
+<!-- Diseño web GODHALLA, tienda de joyeria -->
+<!-- Fecha: Abril 2020 -->
+<!-- Autor: Roser Camps Garcia -->
+
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Raleway:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="row-1">
+            <a href="home.html" class="logo-header header-left">
+                <!-- logo -->
+                <img src="img/logo_b_xs.png" alt="logo" class="logo_xs">
+                <h6 class="company-name">Godhalla craft</h6>
+            </a>
+                <!-- menu -->
+            <input type="checkbox" id="btn-menu"/>
+            <label for="btn-menu" class="icon-menu"><i class="fas fa-bars"></i></label>
+            <nav class="header-right">
+                <ul id="items-menu">
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="aboutUs.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="whatsNew.html">What's new</a>
+                    </li>
+                    <li>
+                        <div class="submenu">
+                            <input type="checkbox" id="btn-submenu">
+                            <label for="btn-submenu"><a>Our products <i class="fas fa-caret-down"></i></a></label>
+                            <ul class="items-submenu">
+                                <li><a href="necklaces.html">Necklaces</a></li>
+                                <li><a href="necklaces.html">Rings</a></li>
+                                <li><a href="necklaces.html">Earrings</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" id="chart">Chart
+                <div class="chart-items">
+                    <p>1</p>
+                </div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="main-header" class="blog-img header-img">
+            <div class="wrapper"></div>
+        </section>
+        <section id="blog">
+            <div class="wrapper">
+                <div class="col-1 centered-header">
+                    <h1>Blog</h1>
+                    <p class="subtitle">Here you will find some posts about ancient cultures; clothing, jewelry, magic, rituals… and more.</p>
+                </div>
+                <!-- Article -->
+                <div class="articles col-1">
+                    <div class="row-1 article">
+                        <div class="col-2 left no-mobilephone">
+                            <img src="img/ph-10.jpg" alt="pol">
+                        </div>
+                        <div class="col-2 right mobile-col-1">
+                            <h2>About us</h2>    
+                            <p class="cursive">June 03, 2020</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempora quidem minima quod illo repellendus incidunt sed sint quae nesciunt hic provident blanditiis dolor asperiores, atque esse numquam quasi placeat quo aliquam ad sapiente beatae.</p>
+                            <a href="aboutUs.html" class="button submit">Read more</a>
+                        </div>
+                    </div>
+                    <div class="row-1 article">
+                        <div class="col-2 right">
+                            <h2>Viking runes</h2>    
+                            <p class="cursive">June 03, 2020</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempora quidem minima quod illo repellendus incidunt sed sint quae nesciunt hic provident blanditiis dolor asperiores, atque esse numquam quasi placeat quo aliquam ad sapiente beatae.</p>
+                            <a href="aboutUs.html" class="button submit">Read more</a>
+                        </div>
+                        <div class="col-2 left no-mobilephone">
+                            <img src="img/ph-20.jpg" alt="pol">
+                        </div>
+                    </div>
+                    <div class="row-1 article">
+                        <div class="col-2 left no-mobilephone">
+                            <img src="img/ph-33.jpg" alt="pol">
+                        </div>
+                        <div class="col-2 right mobile-col-1">
+                            <h2>Viking symbols</h2>    
+                            <p class="cursive">June 03, 2020</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempora quidem minima quod illo repellendus incidunt sed sint quae nesciunt hic provident blanditiis dolor asperiores, atque esse numquam quasi placeat quo aliquam ad sapiente beatae.</p>
+                            <a href="aboutUs.html" class="button submit">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="wrapper">
+            <hr>
+            <div id="footer-credits">
+                <p>© 2014 - <a href="http://campus.espai.es">http://campus.espai.es</a> : Tots els drets reservats</p>
+            </div>
+        </div>
+    </footer> 
+</body>
+</html>

@@ -20,7 +20,7 @@ body{
 }
 
 section .wrapper {
-    padding: 100px 20px;
+    padding: 70px 20px;
 }
 
 img{
@@ -45,6 +45,7 @@ img{
     overflow: hidden;
 }
 .col-2{
+    min-width: 40%;
     max-width: 66%;
     margin: 10px 20px;
     display: flex;
@@ -52,16 +53,16 @@ img{
     justify-content: space-around;
     align-items: flex-start;
 }
+
 .col-1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
     text-align: justify;
     width: 100%;
 }
 
-.col-1 img{
+.centered-image{
     padding: 50px;
     width: 100%;
     min-height: 500px;
@@ -74,6 +75,7 @@ img{
 .centered-header{
     align-self: center;
     margin-bottom: 40px;
+    text-align: center;
 }
 .left{
     align-items: flex-end;
@@ -97,6 +99,22 @@ main section:nth-child(odd):not(:first-child){
     color: white;
     background-color: #383638;
     background: linear-gradient(180deg, rgba(75,73,75,1) 0%, rgba(56,54,56,1) 50%);
+}
+
+/*      Article     */
+.article{
+    background-color: #B8B8B8;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.article .col-2{
+    width: 50%;
+}
+
+.article img{
+    height: 100%;
 }
 
 /*      Buttons     */
@@ -145,6 +163,7 @@ h2{
     font-size: 32px;
     font-weight: bold;
     padding-top: 10px;
+    text-align: center;
 }
 h3{
     font-size: 22px;
@@ -173,6 +192,18 @@ h6{
     font-size: 18px;
     padding-left: 20px;
     text-transform: uppercase;
+}
+.subtitle{
+    font-style: italic;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.cursive{
+    font-style: italic;
+}
+p{
+    padding: 10px 0;
 }
 
 /*-------------------------------------*/
@@ -285,7 +316,7 @@ nav li a:hover {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 600px;
     padding: 100px 0px 20px;
@@ -304,11 +335,17 @@ nav li a:hover {
 .aboutUs-img{
     background-image: url("../img/aboutUs-header-img.jpg");
 }
+/*      "WHAT'S NEW" cover        */
 .whatsNew-img{
     background-image: url("../img/new-header-img.jpg");
 }
+/*      "NECKLACES" cover        */
 .necklaces-img{
     background-image: url("../img/necklaces-header-img.jpg");
+}
+/*      "BLOG" cover        */
+.blog-img{
+    background-image: url("../img/blog-header-img.jpg");
 }
 
 /*-------------------------------------*/
@@ -344,25 +381,26 @@ nav li a:hover {
 }
 
 /*      Pagination      */
-.pages{
+.pagination{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
 
-.pages input{
+.pagination input{
     display: none;
 }
 
-.pages label{
+.pagination label{
     padding: 10px 20px;
 }
 
-.pages input:checked + label{
+.pagination input:checked + label{
     font-weight: bold;
     border: 1px solid #383638;
 }
+
 
 /*-------------------------------------*/
 /*         PRODUCTS COLLECTION         */
@@ -443,10 +481,12 @@ nav li a:hover {
     margin: 10px 0;
 }
 
-#personalized input[type="textarea"]{
+#personalized .input-message{
+    margin: 10px 0;
     height: 200px;
     width: 100%;
-    margin: 10px; 
+    padding: 10px 3px;
+    font-family: 'Raleway', sans-serif;
 }
 
 #personalized .name-email{
@@ -481,6 +521,7 @@ nav li a:hover {
 }
 #contact-details h2{
     margin-bottom: 15px;
+    text-align: right;
 }
 #contact-details li{
     display: flex;
@@ -585,8 +626,13 @@ footer{
 
 #exit-cookies:checked ~ #cookie-banner {
     display: none;
-  }
+}
 
+.close{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
 
 
 /***************************************/
@@ -786,7 +832,7 @@ footer{
     /*       GENERAL SETTINGS          */
     /* ------------------------------- */
     /*      Hide elements       */
-    .no-mobile{
+    .no-mobile, .no-mobilephone{
         display: none!important;
     }
     /*      Titles      */
@@ -812,7 +858,7 @@ footer{
         text-align: center;
     }
     .mobile-col-1{
-        max-width: 80%;
+        width: 100%;
     }
     
     /*-------------------------------------*/
