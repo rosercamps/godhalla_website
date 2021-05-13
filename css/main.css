@@ -103,10 +103,13 @@ main section:nth-child(odd):not(:first-child){
 
 /*      Article     */
 .article{
-    background-color: #B8B8B8;
+    background-color: #dcdcdc;
     display: flex;
     padding: 20px;
-    margin-bottom: 20px;
+}
+
+.article:not(:last-child){
+    margin-bottom: 50px;
 }
 
 .article .col-2{
@@ -133,12 +136,12 @@ main .button{
 }
 /*      Button colors      */
 main section:nth-child(even) .button{
-    color: #B8B8B8;
+    color: #dcdcdc;
     background-color: #383638;
 }
 main section:nth-child(odd) .button{
     color: #383638;
-    background-color: #B8B8B8;
+    background-color: #dcdcdc;
 }
 
 /*      Logos       */
@@ -438,7 +441,7 @@ nav li a:hover {
     margin: 3%;
     width: 150px;
     height: 50px;
-    color: #B8B8B8;
+    color: #dcdcdc;
     background-color: #383638;
     border-radius: 3px;
     display: flex;
