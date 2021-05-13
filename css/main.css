@@ -19,6 +19,10 @@ body{
     margin: 0 auto;
 }
 
+.empty{
+    height: 0;
+}
+
 section .wrapper {
     padding: 70px 20px;
 }
@@ -353,6 +357,10 @@ nav li a:hover {
 /*      "BLOG" cover        */
 .blog-img{
     background-image: url("../img/blog-header-img.jpg");
+}
+/*      "WORK WITH US" cover        */
+.work-img{
+    background-image: url("../img/work-header-img.jpg");
 }
 
 /*-------------------------------------*/
