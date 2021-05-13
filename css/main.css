@@ -25,6 +25,8 @@ body{
 
 section .wrapper {
     padding: 70px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 img{
@@ -127,6 +129,62 @@ main section:nth-child(odd):not(:first-child){
 .article:nth-child(even) .col-2:last-child{
     order: -1;
 }
+
+/*      Form        */
+.form-section .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+
+.form-section .button{
+    margin: 10px;
+}
+
+form{
+    width: 80%;
+    padding-top: 40px;
+}
+
+.row-1-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row-1-form input{
+    height: 50px;
+    width: 420px;
+    padding: 10px 3px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.row-1-form .uploader{
+    border: 1px solid #dcdcdc;
+}
+
+input[type="text"]{
+    height: 50px;
+}
+
+.checkbox{
+    align-self: center;
+}
+
+textarea{
+    height: 200px;
+    width: 100%;
+    padding: 10px 3px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
 
 /*      Buttons     */
 main .button{
@@ -457,21 +515,9 @@ nav li a:hover {
     align-items: center;
 }
 
-/*-------------------------------------*/
-/*    NEWSLETTER/PERSONALIZED FORMS    */
-/*-------------------------------------*/
-.form-section .wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    width: 70%;
-}
-.form-section .button{
-    margin: 10px;
-} 
-
+/*-------------------------------------------------------*/
+/*    FORM (NEWSLETTER / PERSONALIZED / WORK WITH US)    */
+/*-------------------------------------------------------*/
 #newsletter div div{
     margin-bottom: 20px;
 }
@@ -480,37 +526,16 @@ nav li a:hover {
     margin-right: 10px;
 }
 
-.checkbox{
-    align-self: center;
-}
-
 #newsletter .input-email{
     width: 300px;
-    min-height: 50px;
+    height: 50px;
     margin: 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
 }
 
-#personalized .name-email input{
-    height: 50px;
-    width: 48%;
-    margin: 10px 0;
-}
-
-#personalized .input-message, #personalized .input-name, #personalized .input-email{
-    margin: 10px 0;
-    height: 200px;
-    width: 100%;
-    padding: 10px 3px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-}
-
-#personalized .name-email{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+#work-with-us .row-1-form div{
+    width: 420px;
 }
 
 /*-------------------------------------*/
@@ -810,11 +835,12 @@ footer{
     /*           PERSONALIZED FORM         */
     /*-------------------------------------*/
 
-    #personalized .name-email{
+    .row-1-form{
         flex-direction: column;
     }
-    #personalized .name-email input{
-        width: 100%;
+
+    .row-1-form input, .row-1-form div{
+        width: 100%!important;
         margin: 10px 0;
     }
 
@@ -1014,11 +1040,11 @@ footer{
     /*           PERSONALIZED FORM         */
     /*-------------------------------------*/
 
-    #personalized .name-email{
+    .row-1-form{
         flex-direction: column;
     }
-    #personalized .name-email input{
-        width: 100%;
+    .row-1-form input, .row-1-form textarea{
+        width: 100%!important;
         margin: 10px 0;
     }
     /*-------------------------------------*/

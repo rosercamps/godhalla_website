@@ -1,6 +1,6 @@
 <!-- Examen final curso Diseño Adaptativo -->
 <!-- Diseño web GODHALLA, tienda de joyeria -->
-<!-- Fecha: Abril 2020 -->
+<!-- Fecha: May 2020 -->
 <!-- Autor: Roser Camps Garcia -->
 
 <!doctype html>
@@ -234,13 +234,13 @@
                 <h2>Specially for you</h2>
                 <p>You can't find what you want? Just ask for it!</p>
                 <p>Send us a message telling what you're looking for.</p>
-                <div class="row-1 name-email">
+                <div class="row-1 row-1-form">
                     <input type="text" placeholder="Your name" class="input-name">
-                    <input type="text" placeholder="Your email" class="input-email">
+                    <input type="email" placeholder="Your email" class="input-email" required>
                 </div>
-                <textarea placeholder="How can we help you?" class="input-message"></textarea>
+                <textarea placeholder="How can we help you?" class="input-message" aria-required="true"></textarea>
                 <div class="row-1">
-                    <input type="checkbox" id="policy" name="policy" value="read" class="checkbox">
+                    <input type="checkbox" id="policy" name="policy" value="read" class="checkbox" required>
                     <label for="policy">I have read and agree to the <a href="#">Privacy policy</a>.</label>
                 </div>
                 <a href="#" class="button submit">Send</a>

@@ -1,6 +1,6 @@
 <!-- Examen final curso Diseño Adaptativo -->
 <!-- Diseño web GODHALLA, tienda de joyeria -->
-<!-- Fecha: Abril 2020 -->
+<!-- Fecha: May 2020 -->
 <!-- Autor: Roser Camps Garcia -->
 
 <!doctype html>
@@ -68,22 +68,53 @@
             <div class="wrapper"></div>
         </section>
         <section class="empty"></section>
-        <section id="personalized" class="form-section">
+        <section id="work-with-us" class="form-section">
             <div class="wrapper">
-                <!-- Specially for you -->
-                <h2>Specially for you</h2>
-                <p>You can't find what you want? Just ask for it!</p>
-                <p>Send us a message telling what you're looking for.</p>
-                <div class="row-1 name-email">
-                    <input type="text" placeholder="Your name" class="input-name">
-                    <input type="text" placeholder="Your email" class="input-email">
-                </div>
-                <textarea placeholder="How can we help you?" class="input-message"></textarea>
-                <div class="row-1">
-                    <input type="checkbox" id="policy" name="policy" value="read" class="checkbox">
-                    <label for="policy">I have read and agree to the <a href="#">Privacy policy</a>.</label>
-                </div>
-                <a href="#" class="button submit">Send</a>
+                <!-- Work with us form -->
+                <h1>Work with us</h1>
+                <p class="subtitle"> Apply inmediately!</p>
+                <p>Fields width * are mandatory</p>
+                <form id="work-godhalla">
+                    <div class="row-1-form">
+                        <label for="first-name" class="right">First name:*</label>
+                        <input type="text" id="first-name" placeholder="Hanna" required>
+                    </div>
+                    <div class="row-1-form">
+                        <label for="last-name" class="right">Last name:*</label>
+                        <input type="text" id="last-name" placeholder="Smith" required>
+                    </div>
+                    <div class="row-1-form">
+                        <label for="location" class="right">Location:</label>
+                        <input type="text" id="location" placeholder="Barcelona">
+                    </div>
+                    <div class="row-1-form">
+                        <label for="phone" class="right">Phone number:*</label>
+                        <input type="tel" id="phone" placeholder="666 666 666" required>
+                    </div>
+                    <div class="row-1-form">
+                        <label for="email" class="right">E-mail address:*</label>
+                        <input type="email" id="email" placeholder="hannasmith@myemail.com" required>
+                    </div>
+                    <div class="row-1-form">
+                        <label for="curriculum" class="right">Curriculum vitae:*</label>
+                        <input type="file" id="curriculum" class="uploader" required>
+                    </div>
+                    <div class="row-1-form" class="right">
+                        <label for="motivation">Motivation:</label>
+                        <div>
+                            <textarea id="motivation" class="input-message"></textarea>
+                            <input type="file" id="motivation" class="curriculum uploader" placeholder="johnsmith@myemail.com" required>
+                        </div>
+                        
+                    </div>
+                    <div class="left">
+                        <input type="checkbox" id="policy" name="policy" value="read" class="checkbox">
+                        <label for="policy">I have read and agree to the <a href="#">Privacy policy</a>.</label>
+                    </div>
+                    <div class="col-1 left">
+                        <a href="#" class="button submit left">Send</a>
+                    </div>
+                </form>
             </div>
         </section>
         <section id="contact" class="text-section">
