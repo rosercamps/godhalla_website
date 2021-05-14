@@ -110,6 +110,7 @@ main section:nth-child(odd):not(:first-child){
     background-color: #dcdcdc;
     display: flex;
     padding: 20px;
+    min-height: 330px;
 }
 
 .article:not(:last-child){
@@ -118,10 +119,11 @@ main section:nth-child(odd):not(:first-child){
 
 .article .col-2{
     width: 50%;
+    height: auto;
 }
 
 .article .col-2 img{
-    max-height: 275px;
+    height: 100%;    
     width: 100%;
 }
 
@@ -144,7 +146,7 @@ main section:nth-child(odd):not(:first-child){
 }
 
 form{
-    width: 80%;
+    width: 100%;
     padding-top: 40px;
 }
 
