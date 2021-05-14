@@ -25,8 +25,6 @@ body{
 
 section .wrapper {
     padding: 70px 20px;
-    display: flex;
-    justify-content: center;
 }
 
 img{
@@ -122,8 +120,9 @@ main section:nth-child(odd):not(:first-child){
     width: 50%;
 }
 
-.article img{
-    height: 100%;
+.article .col-2 img{
+    max-height: 275px;
+    width: 100%;
 }
 
 .article:nth-child(even) .col-2:last-child{
@@ -755,6 +754,9 @@ footer{
     }
     .mobile-col-1{
         max-width: 80%;
+    }
+    .row-1{
+        justify-content: center;
     }
 
     /*      From        */
