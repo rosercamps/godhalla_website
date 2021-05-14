@@ -529,25 +529,23 @@ nav li .active{
 /*      PRODUCT DETAIL     */
 /*-------------------------------------*/
 
-.detai-pictures .row-1{
+.detail-pictures .row-1{
     padding: 10px 0;
 }
 
-.detai-pictures .row-1 li{
+.detail-pictures .row-1 li{
     padding: 10px;
 }
 
-.detai-pictures .row-1 li:hover img{
+.detail-pictures .row-1 li:hover img{
     opacity: 0.5;
     transform: scale(1.1);
     transition: all 0.3s;
 }
 
-.detai-pictures .row-1 li.active{
+.detail-pictures .row-1 li.active{
     opacity: 0.5;
 }
-
-
 
 /*-------------------------------------------------------*/
 /*    FORM (NEWSLETTER / PERSONALIZED / WORK WITH US)    */
