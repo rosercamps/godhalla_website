@@ -338,7 +338,7 @@ nav{
     top: 70px;
     left: 0%;
     min-width: 100%;
-    height: 50px;
+    height: 60px;
     padding: 10px 0px;
 }
 #btn-submenu:checked ~ .items-submenu{
@@ -348,15 +348,23 @@ nav{
 /*      Menu underline effect       */
 nav li a{
     display: block;
+    font-size: 1em;
     background: 
       linear-gradient(currentColor 0 0) 
       bottom /var(--d, 0) 1px 
       no-repeat;
     transition:0.5s;
 }
-nav li a:hover {
+nav li a:hover:not(.active) {
     --d: 100%;
 }
+
+nav li .active{
+    font-weight: 600;
+    font-size: 1.2em;
+    border-bottom: 1px solid ;
+}
+
 
 /*      Chart       */
 #chart{
@@ -678,6 +686,42 @@ footer{
 }
 
 
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/***************************************/
+/***           ANIMATIONS            ***/
+/***************************************/
+/*      Carrousel       */
+@keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+}
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
 /***************************************/
 /***           TABLET LAYOUT         ***/
 /***************************************/
@@ -711,6 +755,16 @@ footer{
     }
     .mobile-col-1{
         max-width: 80%;
+    }
+
+    /*      From        */
+    .row-1-form{
+        flex-direction: column;
+    }
+
+    .row-1-form input, .row-1-form div{
+        width: 100%!important;
+        margin: 10px 0;
     }
 
     /*-------------------------------------*/
@@ -776,33 +830,9 @@ footer{
         display: flex;
     }
 
-
     /*-------------------------------------*/
     /*             OUR PRODUCTS            */
     /*-------------------------------------*/
-
-    @keyframes display {
-        0% {
-          transform: translateX(200px);
-          opacity: 0;
-        }
-        10% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        30% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        50% {
-          transform: translateX(-200px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(-200px);
-          opacity: 0;
-        }
-    }
     
     #product-collections {
         position: relative;
@@ -830,19 +860,6 @@ footer{
     #our-products .collection div{
         margin: 10%;
     }
-    
-    /*-------------------------------------*/
-    /*           PERSONALIZED FORM         */
-    /*-------------------------------------*/
-
-    .row-1-form{
-        flex-direction: column;
-    }
-
-    .row-1-form input, .row-1-form div{
-        width: 100%!important;
-        margin: 10px 0;
-    }
 
     /*-------------------------------------*/
     /*              FIND US                */
@@ -862,11 +879,13 @@ footer{
         align-items: flex-start;
         text-align: left;
     }
-
-   
-
     
 }
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 /***************************************/
 /***           MOBILE LAYOUT         ***/
@@ -903,6 +922,15 @@ footer{
     }
     .mobile-col-1{
         width: 100%;
+    }
+
+    /*      Form        */
+    .row-1-form{
+        flex-direction: column;
+    }
+    .row-1-form input, .row-1-form textarea{
+        width: 100%!important;
+        margin: 10px 0;
     }
     
     /*-------------------------------------*/
@@ -977,29 +1005,7 @@ footer{
     /*-------------------------------------*/
     /*             OUR PRODUCTS            */
     /*-------------------------------------*/
-
-    @keyframes display {
-        0% {
-          transform: translateX(200px);
-          opacity: 0;
-        }
-        10% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        30% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        50% {
-          transform: translateX(-200px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(-200px);
-          opacity: 0;
-        }
-    }
+    
     
     #product-collections {
     position: relative;
@@ -1031,22 +1037,6 @@ footer{
         margin: 10%;
     }
 
-    /*-------------------------------------*/
-    /*             NEWSLETTER              */
-    /*-------------------------------------*/
-    
-
-    /*-------------------------------------*/
-    /*           PERSONALIZED FORM         */
-    /*-------------------------------------*/
-
-    .row-1-form{
-        flex-direction: column;
-    }
-    .row-1-form input, .row-1-form textarea{
-        width: 100%!important;
-        margin: 10px 0;
-    }
     /*-------------------------------------*/
     /*              FIND US                */
     /*-------------------------------------*/
