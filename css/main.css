@@ -535,8 +535,6 @@ nav li .active{
 
 .detai-pictures .row-1 li{
     padding: 10px;
-    height: 100px;
-    width: 100px;
 }
 
 .detai-pictures .row-1 li:hover img{
@@ -546,8 +544,7 @@ nav li .active{
 }
 
 .detai-pictures .row-1 li.active{
-    border: 1px solid #383638;
-    border-radius: 2px;
+    opacity: 0.5;
 }
 
 
@@ -754,7 +751,7 @@ footer{
 /***************************************/
 /***           TABLET LAYOUT         ***/
 /***************************************/
-@media only screen and (min-width: 501px) and (max-width: 1024px){
+@media only screen and (min-width: 700px) and (max-width: 1024px){
     /* ------------------------------- */
     /*       GENERAL SETTINGS          */
     /* ------------------------------- */
@@ -783,6 +780,7 @@ footer{
         align-items: flex-start;
     }
     .mobile-col-1{
+        flex-direction: column;
         max-width: 80%;
     }
     .row-1{
@@ -922,7 +920,7 @@ footer{
 /***************************************/
 /***           MOBILE LAYOUT         ***/
 /***************************************/
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 699px){
     /* ------------------------------- */
     /*       GENERAL SETTINGS          */
     /* ------------------------------- */
@@ -953,7 +951,7 @@ footer{
         text-align: center;
     }
     .mobile-col-1{
-        width: 100%;
+        width: 100%!important;
     }
 
     /*      Form        */
@@ -963,6 +961,12 @@ footer{
     .row-1-form input, .row-1-form textarea{
         width: 100%!important;
         margin: 10px 0;
+    }
+
+    /*      Article     */
+    .article{
+        flex-direction: column;
+        align-items: center;
     }
     
     /*-------------------------------------*/
