@@ -109,7 +109,10 @@ main section:nth-child(odd):not(:first-child){
 .article{
     background-color: #dcdcdc;
     display: flex;
-    padding: 20px;
+    padding: 2%;
+}
+
+.blog-article{
     min-height: 330px;
 }
 
@@ -127,7 +130,7 @@ main section:nth-child(odd):not(:first-child){
     width: 100%;
 }
 
-.article:nth-child(even) .col-2:last-child{
+.blog-article:nth-child(even) .col-2:last-child{
     order: -1;
 }
 
@@ -406,7 +409,7 @@ nav li .active{
     background-position: center center;
 }
 /*      "HOME" cover         */
-.home-img{
+.home-img, .chart-img{
     background-image: url("../img/home-header-img.jpg"); 
 }
 /*      "ABOUT US" cover        */
@@ -656,6 +659,17 @@ nav li .active{
 	background: linear-gradient(bottom, #6D0202 22%, rgb(201, 0, 0) 61%);
     background-clip: text;
     -webkit-background-clip: text;
+}
+
+/*-------------------------------------*/
+/*             CHART                   */
+/*-------------------------------------*/
+
+.total-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+    border-top: #dcdcdc 1px solid;
 }
 
 /*-------------------------------------*/
@@ -962,7 +976,7 @@ footer{
     }
 
     /*      Article     */
-    .article{
+    .blog-article{
         flex-direction: column;
         align-items: center;
     }

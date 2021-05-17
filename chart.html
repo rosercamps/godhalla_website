@@ -6,7 +6,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-    <title>Product name</title>
+    <title>Chart</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <meta charset="utf-8" /> 
@@ -44,16 +44,16 @@
                     <li>
                         <div class="submenu">
                             <input type="checkbox" id="btn-submenu">
-                            <label for="btn-submenu"><a class="active">Collections <i class="fas fa-caret-down"></i></a></label>
+                            <label for="btn-submenu"><a>Collections <i class="fas fa-caret-down"></i></a></label>
                             <ul class="items-submenu">
-                                <li><a href="necklaces.html" class="active">Necklaces</a></li>
+                                <li><a href="necklaces.html">Necklaces</a></li>
                                 <li><a href="necklaces.html">Rings</a></li>
                                 <li><a href="necklaces.html">Earrings</a></li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="blog.html" class="active">Blog</a>
                     </li>
                 </ul>
             </nav>
@@ -65,39 +65,53 @@
         </div>
     </header>
     <main>
-        <section id="main-header" class="necklaces-img header-img">
+        <section id="main-header" class="chart-img header-img">
             <div class="wrapper"></div>
         </section>
         <section id="blog">
             <div class="wrapper">
-                <!-- Product details -->
+                <div class="col-1 centered-header">
+                    <h1>Chart</h1>
+                </div>
+                <!-- Article -->
+                <div class="articles col-1">
                     <div class="row-1 article">
-                        <div class="col-3 left mobile-col-1">
-                            <img src="img/necklaces/IMG_20200810_175750_054.jpg" alt="pol">
-                            <div class="detail-pictures">
-                                <ul class="row-1">
-                                    <li class="active">
-                                        <a href=""><img src="img/necklaces/IMG_20200810_175750_054.jpg" alt="pol"></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="img/necklaces/IMG_20200810_175750_054.jpg" alt="pol"></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="img/necklaces/IMG_20200810_175750_054.jpg" alt="pol"></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="col-3 no-mobilephone">
+                            <a href="product-detail.html"><img src="img/necklaces/IMG_20200810_175750_054.jpg" alt="produc831"></a>
                         </div>
-                        <div class="col-2 right mobile-col-1">
-                            <h2>Tiger eye necklace</h2>   
+                        <div class="col-3 right mobile-col-1">
+                            <h2><a href="product-detail.html">Tiger eye necklace</a></h2>    
                             <a href="necklaces.html" class="cursive">Necklaces collection</a> 
-                            <h5>8,99€</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repudiandae temporibus odit esse iusto quaerat, corrupti sit fuga error qui. Vero pariatur autem quas temporibus fugiat facilis, maiores consectetur quis, error nihil alias architecto, repellat consequatur? Velit fuga eum quos.</p>
-                            <a href="#" class="button submit">Add to chart</a>
+                            <p class="no-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repudiandae temporibus odit esse iusto quaerat, corrupti sit fuga error... <a href="product-detail.html" class="cursive"> read more</a></p>
+                            <a href="" class="submit"><i class="fas fa-trash"></i> Remove</a>
+                        </div>
+                        <div class="col-3 left mobile-col-1">
+                            <p class="cursive">8,99€</p>
                         </div>
                     </div>
+                    <div class="row-1 article">
+                        <div class="col-3 no-mobilephone">
+                            <a href="product-detail.html"><img src="img/necklaces/IMG_20200810_175750_054.jpg" alt="produc831"></a>
+                        </div>
+                        <div class="col-3 right mobile-col-1">
+                            <h2><a href="product-detail.html">Tiger eye necklace</a></h2>    
+                            <a href="necklaces.html" class="cursive">Necklaces collection</a> 
+                            <p class="no-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repudiandae temporibus odit esse iusto quaerat, corrupti sit fuga error... <a href="product-detail.html" class="cursive"> read more</a></p>
+                            <a href="" class="submit"><i class="fas fa-trash"></i> Remove</a>
+                        </div>
+                        <div class="col-3 left mobile-col-1">
+                            <p class="cursive">8,99€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <h5 class="col-2 right">Total</h5>
+                    <h6 class="col-3 left cursive">17,98</h6>
+                </div>
+                <div class="row-1">
+                    <a href="product-detail.html" class="button submit">Check out</a>
+                </div>
             </div>
-            
         </section>
         
     </main>
